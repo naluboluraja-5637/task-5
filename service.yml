@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: abc
+spec:
+  type: NodePort
+  selector:
+    app: swiggy
+  ports:
+    - port: 80          # service port
+      targetPort: 80    # container port
+      nodePort: 31111   # NodePort (30000–32767)
